@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox practice !</title>
+    <style>
+        .cont{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: row-reverse;
+        }
+        .div{
+            border: 2px solid red;
+            padding: 5px;
+        }
+        .navs{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            gap: 15px;
+        }
+        .links{
+            display: flex;
+            gap: 1rem;
+            justify-content: space-evenly;
+        }
+        .links > a{
+            
+            text-decoration: none;
+            padding-left:6px ;
+            justify-content: space-evenly;
+        }
+        .card{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-cont{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .card-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="div">A</div>
+        <div class="div">B</div>
+        <div class="div">C</div>
+    </div>
+    <section>
+        <nav class="navs">
+            <div>Site</div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </section>
+    <section>
+        
+        <div class="card">
+            <div class="card-cont">
+                <h3>product</h3>
+                <p>description</p>
+            </div>
+            <div class="card-footer">
+                <span>$99</span>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

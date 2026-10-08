@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms practice</title>
+</head>
+<body>
+    <header>
+        <h2>Forms :</h2>
+    </header>
+    <main>
+        <section>
+            <h4>search form</h4>
+            <form action="/search" method="get">
+                <input name="q">
+                <button type="submit">Search</button>
+            </form>
+            <hr>
+        </section>
+        <section>
+            <form action="">
+                <label for="email">Email :</label>
+                <input type="email" id="Email" name="email" placeholder="sujith1368@proton.me" required>
+            </form>
+            <hr>
+        </section>
+        <section>
+            <h4>input types :</h4>
+            <label >text : <input type="text"></label><br>
+            <label for=""> email : <input type="email"></label><br>
+            <label for=""> password : <input type="password"></label><br>
+            <label for=""> number: <input type="number"></label><br>
+            <label for="">date : <input type="date"></label><br>
+            <label for=""> url <input type="url"></label><br>
+            <label for="">telephone <input type="tel"></label><br>
+            <label for="">search <input type="search"></label><br>
+            <label for=""> file <input type="file"></label><br>
+            <label for="">checkbox <input type="checkbox"></label><br>
+            <label for=""> radio <input type="radio"></label><br>
+            <label for=""> range <input type="range"></label><br>
+            <label for="">color <input type="color"></label><br> <hr>
+        </section>
+        <section>
+            <label for="message">Me</label>
+            <textarea name="message" id="message" rows="5" cols="50" placeholder="write the msg in here "></textarea>
+        </section>
+        <section>
+            <h4>select and option</h4>
+            <select name="role" id="role">
+                <option value="std">Student</option>
+                <option value="dev">developer</option>
+                <option value="police">police</option>
+            </select>
+            <hr>
+        </section>
+        <section>
+            <h4>experience :</h4>
+            <input type="radio" id="beg" name="exp">
+            <label for="beg">beginer</label>
+            <input type="radio" name="exp" id="adv">
+            <label for="adv"> advanced</label>
+            <input type="radio" id="mas" name="mass">
+            <label for="mas">master</label> <hr>
+            <!-- name is different ! -->
+        </section>
+        <section>
+            <fieldset>
+                <legend>personal info</legend>
+                <input type="text" name="hello" id="hi">
+                <label for="hi">enter the text </label>
+            </fieldset><hr>
+        </section>
+        <section>
+            <button type="submit">submit</button>
+            <button type="reset">clear</button>
+            <button type="button"> open preview</button>
+        </section>
+    </main>
+
+
+</body>
+</html>
