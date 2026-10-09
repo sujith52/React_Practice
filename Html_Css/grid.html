@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practice</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 16px;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(auto-fit ,minmax(200px,1fr));
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            color: black;
+            grid-template-rows: 100px 100px;
+        }
+        .card{
+            padding: 24px;
+            background-color: lightblue;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card:hover{
+            background-color: lightpink;
+            transition: 2ms;
+            transform: scale(1.1);
+        }
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .proj-card{
+            padding: 24px;
+            background-color: lightskyblue;
+            border-radius: 12px;
+        }
+        .proj-card h3{
+            margin-top: 0;
+        }
+        .proj-card p{
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">Html</div>
+        <div class="card">CSS</div>
+        <div class="card">JAVA SCRIPT</div>
+        <div class="card">PYTHON</div>
+        <div class="card">MONGO DB</div>
+        <div class="card">REACT JS</div>
+    </div>
+    <h5 style="text-align: center;">Project Gallery</h5>
+    <div class="projects">
+        <article class="proj-card">
+            <h3>Fraud detection</h3>
+            <p>machine learning fundamnetals and AI</p>
+        </article>
+        <article class="proj-card">
+            <h3>AI recomendation system</h3>
+            <p>machine learning fundamnetals and AI</p>
+        </article>
+        <article class="proj-card">
+            <h3>Lead generation</h3>
+            <p>machine learning fundamnetals and AI</p>
+        </article>
+    </div>
+</body>
+</html>
