@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>response </title>
+    <style>
+        .cont{
+            width: 100%;
+            max-width: 1200px;
+            margin-block-start: auto;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .gri{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%,240px),1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .card{
+            padding: 24px;
+            background-color: lightgray;
+            margin: 2px;
+            border-radius: 20px;
+        }
+        .imgs{
+            border-radius: 50%;
+            max-width: 30%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Hello world !</h1>
+    </div>
+    <section>
+        <div class="gri">
+            <div class="card">Hello</div>
+            <div class="card">World</div>
+        </div>
+    </section>
+    <div>
+        <img src="https://avatars.githubusercontent.com/u/148097955?v=4" alt="sujith profile" srcset="" class="imgs">
+    </div>
+</body>
+</html>
