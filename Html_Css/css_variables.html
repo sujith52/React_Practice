@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variables</title>
+    <style>
+        :root{
+            --primary: lightblue;
+            --radius: 24px;
+            --font: 20px;
+        }
+        .container{
+            --cards:dark;
+            background-color: var(--primary,lightblue);
+            border-radius: var(--radius);
+            padding: var(--radius);
+            color: var(--cards);
+            border: 1px dashed darkblue;
+        }
+        .container p{
+            font-size: var(--font,18px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The human must follow the way of nature to sustain in life.</h1>
+        <p>Never go against fate if you are a common man.</p>
+    </div>
+</body>
+</html>

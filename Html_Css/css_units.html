@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS units !</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        .container{
+            /* width: 80%; */
+            width: min(90%, 1200px);
+            background-color: lightcoral;
+            height: 4rem;
+            font-size: clamp(24px,10vh,56px);
+            border-radius: 1vw;
+            padding: max(16px,4vw);
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .hero{
+            width: min(90%,1200px);
+            min-height: 60vh;
+            margin-inline: auto;
+            padding: clamp(24px,5vw,80px);
+            text-align: center;
+            background-color: lightskyblue;
+            border-radius: clamp(24px,10vh,54px);
+        }
+        .hero h1{
+            font-size: clamp(2rem,5vw,4.5rem);
+        }
+        .hero p{
+            font-size: clamp(1rem, 1.5vw, 14.5rem);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        hello
+    </div>
+    <section class="hero">
+        <h1>build something worth of your time.</h1>
+        <p>learn, create, and bring your ideas to life.</p>
+        <button>Get Started</button>
+    </section>
+</body>
+</html>

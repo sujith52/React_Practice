@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light and dark theme !</title>
+    <style>
+        :root{
+            color-scheme:light ;
+            --bg-color:#f8fafc;
+            --text-color: #1e293b;
+            --card-color: #ffffff;
+            --border-color: #e2e8f0;
+            --primary-color: #2563eb;
+        }
+
+        :root[data-theme="dark"]{
+            color-scheme: dark;
+            --bg-color: #111827;
+            --text-color: #f9fafb;
+            --card-color: #1f2937;
+            --border-color: #374151;
+            --primary-color: #60a5fa;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .hero{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            font-size: clamp(14px, 5vw, 34px);
+            border-radius: 24px;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(2,4fr);
+            gap: 10px;
+        }
+        .mains{
+            padding: 15px 20px;
+            background: var(--primary-color);
+            border-radius: 24px;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="themeToggle">Click to change to theme</button>
+    <section class="hero">
+        <h1>When the world is burning my stomach is churning !</h1>
+        <div class="cards">
+            <div class="mains">Emperor Domination</div>
+            <div class="mains">Martial God Ausra</div>
+            <div class="mains">Hong Huang</div>
+            <div class="mains">Soul Land Douluo dalu</div>
+        </div>
+    </section>
+    <script>
+        let button = document.querySelector('#themeToggle')
+        button.addEventListener("click",()=>{
+            let root = document.documentElement;
+            let currenttheme = root.dataset.theme;
+            root.dataset.theme = 
+            currenttheme === "dark" ? "light" : "dark";
+        })
+    </script>
+</body>
+</html>
