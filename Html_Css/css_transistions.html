@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css transistions !</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .mains{
+            padding: 16px 36px;
+            font-size: 3vw;
+            margin: 24px;
+            background-color: lightgray;
+            border-radius: 24px;
+            border: none;
+        }
+        .mains:hover {
+            background-color: violet;
+            transition: background-color 0.5s ease-in-out;
+            /* transform: scale(1.2); */
+        }
+        .box {
+        width: 100px;
+        height: 100px;
+        background: royalblue;
+        border-radius: 12px;
+
+        animation: moveBox 1s infinite alternate ease-in-out;
+        }
+
+    @keyframes moveBox{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(150px);
+        }
+    }
+    .sujith img{
+        width: 55%;
+        border-radius: 50%;
+    }
+    .sujith{
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        background-image: url('https://github.com/sujith52/Python_Practice/blob/main/Basic%20Python/File%20Handling/file_handling.jpg?raw=true');
+        background-size: cover;
+        border-radius: 50%;
+        animation: sujithmove 3s infinite alternate-reverse ease-in-out;
+    }
+    @keyframes sujithmove{
+        from{
+            transform: translateX(0);
+            
+        }
+        to{
+            transform: translate(30px,90px);
+            /* transform: rotate(36deg); */
+            /* transform: skew(10deg); */
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>hover on button </h1>
+    <button class="mains">Hover</button>
+    <h2>Watch the box move!</h2>
+    <div class="box"></div>
+    <h1>it is like GSAP</h1>
+    <div class="sujith"></div>
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">it seems like you will never forget</h1>
+</body>
+</html>
