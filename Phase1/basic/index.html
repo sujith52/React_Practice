@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN App</title>
+
+    <!-- 1. Load React and ReactDOM from CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- 2. Load Babel so the browser can understand JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            /* text-align: center; */
+            background: lightgray;
+        }
+        .imgs{
+            border-radius: 50%;
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Root element where the React app will mount -->
+    <div id="root"></div>
+
+    <!-- 3. Your React JSX Code -->
+    <!-- components jsx files -->
+     <script type="text/babel" src="./components/basic.jsx"></script>
+     <script type="text/babel" src="./components/props.jsx"></script>
+    <!-- main jsx file -->
+    <script type="text/babel" src="./App.jsx"></script>
+</body>
+</html>
