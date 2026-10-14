@@ -42,6 +42,22 @@ root.render(
 
         <Restatunts/>
 
-        <Resdatas/>
+        <Resdatas/> 
+        <Conditional/>
+        <HandlingClicks/>
+        <OnsChange/>
+        {/* <Onsubmits/>
+
+        <IncreButton/>
+        <ControlledInput/>
+        <Forms/> */}
+        {/* <OneState/>
+        <Checboxes/>
+        <AllTemp/>
+        <Parent/> */}
+    
+
+       {/* <TailwindPrac/>  */}
+        
     </>
 )

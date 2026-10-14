@@ -79,3 +79,18 @@ function Resdatas(){
         </div>
     )
 }
+
+function Conditional(){
+    let isLoggedin = true
+    let loading = false
+    if(loading){
+        return <h2>It is loading bro </h2>
+    }
+    return(
+        <div>
+            <h1>Restratunt</h1>
+            {isLoggedin && <h2>Welcome Sujith Bro !</h2>}
+            {isLoggedin ? <p>Hello welcome bro</p> :<p>Login at first bro !</p>}
+        </div>
+    )
+}
