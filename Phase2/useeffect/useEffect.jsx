@@ -60,3 +60,64 @@ function FetchUsers(){
         </div>
     )
 }
+
+
+function AbortedController(){
+    let [posts, setPost] = useState([])
+    let [load, setLoad] = useState(true)
+    let [err, setErr] = useState("")
+
+    useEffect(()=>{
+        let controller = new AbortController()
+
+        async function fetchPosts(){
+            setLoad(false)
+            setErr("")
+
+            try{
+                let resonse = await fetch("https://jsonplaceholder.typicode.com/posts",
+                    {signal: controller.signal}
+                )
+
+                if(!resonse.ok){
+                    throw new Error("Failed to fetch the api")
+                }
+
+                let data = await resonse.json()
+                setPost(data.slice(0,10))
+            }
+            
+            catch(err){
+                if(err.name !== "AbortError"){
+                    setErr(err.message)
+                }
+            }
+            finally{
+                if(!controller.signal.aborted){
+                    setLoad(false)
+                }
+            }
+        }
+
+        fetchPosts()
+        return()=>{
+            controller.abort()
+        }
+    },[])
+
+    if(load) return <p>Loading the posts</p>
+    if(err) return <p>Error : {err}</p>
+
+    return(
+        <div>
+            <h3 className="text-3xl text-center p-1 m-10 rounded-2xl bg-green-200 ">Posts</h3>
+
+            {posts.map((p)=>(
+                <div key={p.id} className="text-center bg-blue-300 p-4 m-1 rounded-xl">
+                    <h5 className="text-2xl ">{p.title}</h5>
+                    <p>{p.body}</p>
+                </div>
+            ))}
+        </div>
+    )
+}
