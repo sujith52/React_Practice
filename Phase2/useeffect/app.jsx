@@ -3,14 +3,18 @@ let root = ReactDOM.createRoot(cont)
 root.render(
     <>
         <h1>Hello world !</h1>
-        <UseEff/>
+        {/* <UseEff/> */}
         {/* <CleanUp/> */}
         {/* <FetchUsers/> */}
         {/* <AbortedController/> */}
-        <Usereff/>
+        {/* <Usereff/> */}
 
-        <Clicks/>
+        {/* <Clicks/> */}
 
+        <UseMemos />
+
+        <UseCallback/>
+        <Usereducers/>
 
     </>
 )
