@@ -13,7 +13,7 @@ function MovieCard({movie}){
             />
             
             {/* Overlay with Favorite Button */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-end p-4">
+            <div className="absolute inset-0 bg-gradient-to from-slate-950/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-end p-4">
                 <button 
                     onClick={addFav}
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700/50 text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:bg-rose-500/20 hover:border-rose-500/50 active:scale-95"
