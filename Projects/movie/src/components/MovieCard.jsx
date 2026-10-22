@@ -4,9 +4,9 @@ function MovieCard({movie}){
     }
 return (
     <div className="flex flex-col bg-slate-800 hover:bg-slate-700 p-4 rounded-lg transition mb-2 m-1">
-        <img src={movie.url} alt={movie.title} className="w-full rounded-md" />
-        <div className="flex text-center items-center justify-between">
-        <button onClick={addFav} className="mt-2 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded">
+        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full rounded-md" />
+        <div className="flex flex-col text-center items-center justify-between">
+        <button onClick={addFav} className="mt-2 bg-blue-500 hover:bg-blue-600 text-white p-1 rounded">
             💖
         </button>
         <h3 className="text-white mt-2 font-bold">{movie.title}</h3>

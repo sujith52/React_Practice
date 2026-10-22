@@ -23,10 +23,22 @@ function Home(){
         popularmovies()
     },[])
 
-    function handlefunc(e){
+    let handlefunc = async (e) => {
         e.preventDefault()
-        console.log(`hello bros `)
-        alert(search)
+        if(!search.trim()) return
+        if(load) return
+        setLoad(true)
+        try{
+            let searchResults = await searchMovies(search)
+            setMovies(searchResults)
+            setErr(null)
+        } catch(err){
+            console.log(err)
+            setErr(`it was failed to load the search result !`)
+        } finally{
+            setLoad(false)
+        }
+        
     }
 
     return(
@@ -42,11 +54,14 @@ function Home(){
                 className=" p-1 px-6 m-2 bg-red-400 rounded-xl"
                 >Search</button>
             </form>
-            <div className="movie-grid">
+            {err && <div><h1>{err}</h1></div>}
+            {load ? (<div>Loading....</div>):
+            (<div className="movie-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 p-4 ">
                 {movies.map(movie => (
                     movie.title.toLowerCase().startsWith(search) && (<MovieCard movie={movie} key={movie.id}/>)
                 ))}
-            </div>
+            </div>)
+            }
         </div>
     )
 }
