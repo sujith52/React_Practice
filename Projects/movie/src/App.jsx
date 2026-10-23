@@ -2,10 +2,11 @@ import Home from "./Pages/Home"
 import Fav from "./Pages/Fav"
 import NavBar from "./components/NavBar"
 import {Routes, Route} from "react-router-dom"
+import {MovieProvider} from "./context/MovieContext"
 
 function App(){
   return(
-    <div>
+    <MovieProvider>
       <NavBar/>
       <main>
       <Routes>
@@ -14,7 +15,7 @@ function App(){
         <Route path="/ele" element={<Example/>} />
       </Routes>
     </main>
-    </div>
+    </MovieProvider>
   )
 }
 
