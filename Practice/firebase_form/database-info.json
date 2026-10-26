@@ -1,0 +1,22 @@
+{
+  "registerUsers": {
+    "-P4sTzx7KrskSsWreGCG": {
+      "confirmPassword": "sujith",
+      "email": "sujith1368@proton.me",
+      "fullname": "sujith",
+      "password": "sujith"
+    },
+    "-P4sU7RUexg5DkzyO5Cg": {
+      "confirmPassword": "sujith",
+      "email": "sreeja1368@proton.me",
+      "fullname": "sreeja",
+      "password": "sujith"
+    },
+    "-P4sUAuwjzZtj4E7QYuD": {
+      "confirmPassword": "sujith",
+      "email": "latha1368@proton.me",
+      "fullname": "latha",
+      "password": "latha"
+    }
+  }
+}
