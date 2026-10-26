@@ -16,9 +16,10 @@ root.render(
         <UseCallback/>
         <Usereducers/> 
         <UseContexted/>
+        <CustomHooks/>
         */}
 
-        <CustomHooks/>
+        <FeetchApi/>
 
     </>
 )
