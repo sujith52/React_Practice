@@ -15,10 +15,14 @@ let Dashboard = lazy(()=> import('./phase2nd/Dashbard'))
 import RegisterForm from './zod/RegisterForm'
 import ErroredPage from './zod/ErroredPage'
 
+import Env from './last3/Env'
+import ReuseLoading from './last3/ReuseLoading'
+
 function App() {
   return(
     <Routes>
       <Route path="/" element={<Navabar/>} />
+      <Route path="/navbar" element={<Navabar/>} />
       <Route path="/above" element={<About/>} />
       <Route path="/img" element={<Image/>} />
       <Route path="/para/:productId" element={<UsePara/>} />
@@ -43,6 +47,8 @@ function App() {
 
       <Route path='/zod' element={<RegisterForm/>} />
       <Route path='/error' element={<ErroredPage/>} />
+      <Route path='/env' element={<Env/>} />
+      <Route path='/button' element={<ReuseLoading/>} />
     </Routes>
   )
 }
