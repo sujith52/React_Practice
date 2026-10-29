@@ -18,6 +18,8 @@ import ErroredPage from './zod/ErroredPage'
 import Env from './last3/Env'
 import ReuseLoading from './last3/ReuseLoading'
 
+import Page1 from './shadcn/Page1'
+
 function App() {
   return(
     <Routes>
@@ -49,6 +51,7 @@ function App() {
       <Route path='/error' element={<ErroredPage/>} />
       <Route path='/env' element={<Env/>} />
       <Route path='/button' element={<ReuseLoading/>} />
+      <Route path='/shad' element={<Page1/>} />
     </Routes>
   )
 }

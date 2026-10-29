@@ -28,6 +28,7 @@ const Navabar = () => {
         <Link to="/error" className='hover:text-blue-600 transition-colors'>Error Page</Link>
         <Link to="/env" className='hover:text-blue-600 transition-colors'>Env Config</Link>
         <Link to="/button" className='hover:text-blue-600 transition-colors'>ReuseLoading / Button</Link>
+        <Link to="/shad" className='hover:text-blue-600 transition-colors'>shad sn button</Link>
       </div>
       <Navs />
     </>
