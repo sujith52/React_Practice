@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useNavigate, Navigate } from 'react-router-dom';
 import {Dashboards, Homes} from './redirect/Functions'
+import UseNavigate from './useNavigate/UseNavigate'
 
 function Home() {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/odash" element={<Dashboards />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/usenav" element={<UseNavigate />} />
         </Routes>
       </div>
     </BrowserRouter>
