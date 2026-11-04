@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useNavigate, Navigate } from 'react-router-dom';
 import {Dashboards, Homes} from './redirect/Functions'
 import UseNavigate from './useNavigate/UseNavigate'
+import Params from './pathParams/Params'
 
 function Home() {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ohome" element={<Homes />} />
           <Route path="/odash" element={<Dashboards />} />
+          <Route path="/paths/:name" element={<Params />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/usenav" element={<UseNavigate />} />
