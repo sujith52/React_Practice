@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Untitled</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="root"></div>
+  <!--
+    Import map generated with JSPM Generator
+    Edit here: https://generator.jspm.io/#U2VhYGBmD80rySzJSU1hSKzIzC92MNQzMtQzZChKTUwucTC01DMGckoSM3PKM/NSkouLHUyAIqYAXyBl/joA
+  -->
+  <script type="importmap">
+  {
+    "imports": {
+      "axios": "https://ga.jspm.io/npm:axios@1.21.1/index.js",
+      "react": "https://ga.jspm.io/npm:react@19.3.1/dev.index.js",
+      "tailwindcss": "https://ga.jspm.io/npm:tailwindcss@4.3.5/dist/lib.mjs"
+    },
+    "scopes": {
+      "https://ga.jspm.io/": {
+        "#lib/adapters/http.js": "https://ga.jspm.io/npm:axios@1.21.1/lib/helpers/null.js",
+        "#lib/platform/node/classes/Buffer.js": "https://ga.jspm.io/npm:axios@1.21.1/lib/helpers/null.js",
+        "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:axios@1.21.1/lib/helpers/null.js",
+        "#lib/platform/node/index.js": "https://ga.jspm.io/npm:axios@1.21.1/lib/platform/browser/index.js"
+      }
+    }
+  }
+  </script>
+  
+  <!-- ES Module Shims import maps polyfills -->
+  <script async src="https://ga.jspm.io/npm:es-module-shims@2.8.4/dist/es-module-shims.js" crossorigin="anonymous"></script>
+  
+  <script type="module">
+    import * as axios from "axios";
+    import * as react from "react";
+    import * as tailwindcss from "tailwindcss";
+    
+    console.log(axios, react, tailwindcss);
+
+    let cont = document.getElementById('root')
+    let root = react.createRoot(cont)
+    root.render(<h1>Hello world !</h1>)
+    
+    // Write main module code here, or as a separate file with a "src" attribute on the module script.
+  </script>
+</body>
+</html>
