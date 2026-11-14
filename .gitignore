@@ -18,3 +18,13 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react
+
+# TanStack Start / Nitro Build Outputs & Caches
+.output/
+.tanstack/
+dist/
+
+# Environment Files & Local Secrets
+.env
+.env.local
+.env.*.local
