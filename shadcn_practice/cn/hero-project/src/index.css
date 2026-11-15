@@ -137,3 +137,7 @@
     @apply font-sans;
     }
 }
+
+:root {
+  --background: #f8f8f8;
+}
